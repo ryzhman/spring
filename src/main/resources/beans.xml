@@ -7,6 +7,10 @@
     <bean id="helloWorldService" class="com.go2it.edu.service.HelloWorldService">
         <constructor-arg value="My name is Bond." />
     </bean>
+    <bean name="application" class="com.go2it.edu.Application">
+        <constructor-arg ref="helloWorldService" />
+    </bean>
+
     <bean id="helloKittyWorldService" 	class="com.go2it.edu.service.HelloKittyService" />
 
 

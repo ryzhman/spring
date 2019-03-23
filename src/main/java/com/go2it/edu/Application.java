@@ -1,4 +1,4 @@
-package com.go2it.edu.spring;
+package com.go2it.edu;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,15 +9,28 @@ import com.go2it.edu.service.IGreetingService;
 
 public class Application {
 
-	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
-		IGreetingService service = (IGreetingService)ctx.getBean("helloWorldService");
-		service.sendGreeting();
+	IGreetingService greeting = null;
 
+	public Application() {
 	}
 
+	public Application(IGreetingService greeting) {
+		this.greeting = greeting;
+	}
 
-	public void logExample(){
+	public static void main(String[] args) {
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+		Application application = (Application) ctx.getBean("application");
+		application.start();
+	}
+
+	public void start() {
+		if (greeting != null) {
+			greeting.sendGreeting();
+		}
+	}
+
+	public void logExample() {
 		Logger logger = LoggerFactory.getLogger(Application.class);
 		logger.trace("Hello World");
 		logger.debug("Hello World");
