@@ -5,7 +5,9 @@
       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="helloWorldService" class="com.go2it.edu.service.HelloWorldService">
-        <constructor-arg value="My name is Bond." />
+        <!--<constructor-arg value="My name is Bond." />-->
+        <property name="message" value="My name is Bond." />
+
     </bean>
     <bean name="application" class="com.go2it.edu.Application">
         <constructor-arg ref="helloWorldService" />

@@ -17,4 +17,12 @@ public class HelloWorldService implements IGreetingService {
 	public void sendGreeting() {
 		System.out.println("Hello, world! " + message);
 	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
 }
