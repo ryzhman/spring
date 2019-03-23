@@ -5,5 +5,7 @@
       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="helloWorldService" class="com.go2it.edu.service.HelloWorldService"/>
+    <bean id="helloKittyWorldService" 	class="com.go2it.edu.service.HelloKittyService" />
+
 
 </beans>
