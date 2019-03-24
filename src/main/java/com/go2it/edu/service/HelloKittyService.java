@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author Alex Ryzhkov
  */
-@Component
+@Component(value = "helloKittyService")
 public class HelloKittyService implements IGreetingService {
 	public void sendGreeting() {
 		System.out.println("Hello, Kitty!");

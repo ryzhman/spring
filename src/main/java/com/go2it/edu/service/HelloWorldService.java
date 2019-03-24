@@ -5,7 +5,7 @@ import javax.inject.Named;
 /**
  * @author Alex Ryzhkov
  */
-@Named
+@Named("helloWorldService")
 public class HelloWorldService implements IGreetingService {
 	public String message;
 
