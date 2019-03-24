@@ -15,7 +15,13 @@
     </properties>
 
     <dependencies>
-
+        <!--Spring annotations-->
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
+        <!--Spring Context/IoC dependecy-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>

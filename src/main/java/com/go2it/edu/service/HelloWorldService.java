@@ -1,8 +1,11 @@
 package com.go2it.edu.service;
 
+import javax.inject.Named;
+
 /**
  * @author Alex Ryzhkov
  */
+@Named
 public class HelloWorldService implements IGreetingService {
 	public String message;
 

@@ -1,15 +1,20 @@
 package com.go2it.edu;
 
+import javax.inject.Inject;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 import com.go2it.edu.service.IGreetingService;
 
+@Component
 public class Application {
-
-	IGreetingService greeting = null;
+	@Inject
+	//	@Autowired - this annotation will do literally the same as Inject
+			IGreetingService greeting = null;
 
 	public Application() {
 	}
@@ -19,7 +24,8 @@ public class Application {
 	}
 
 	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+		//		ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("beans-auto-discovery.xml");
 		Application application = (Application) ctx.getBean("application");
 		application.start();
 	}
