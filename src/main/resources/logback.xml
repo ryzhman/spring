@@ -36,12 +36,8 @@
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="STDOUT"/>
         <appender-ref ref="INFO_APPENDER"/>
         <appender-ref ref="ERROR_APPENDER"/>
-    </root>
-    <logger name="INFOLogger" level="INFO">
         <appender-ref ref="STDOUT"/>
-        <appender-ref ref="INFO_APPENDER"/>
-    </logger>
+    </root>
 </configuration>

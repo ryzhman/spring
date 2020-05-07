@@ -35,6 +35,7 @@ public class Application {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("beans-auto-discovery.xml");
 		Application application = (Application) ctx.getBean("application");
 		application.start();
+		logExample();
 	}
 
 	public void start() {
@@ -43,7 +44,7 @@ public class Application {
 		}
 	}
 
-	public void logExample() {
+	public static void logExample() {
 		Logger logger = LoggerFactory.getLogger(Application.class);
 		logger.trace("Hello World");
 		logger.debug("Hello World");
